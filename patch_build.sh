@@ -26,7 +26,7 @@ patch() {
 }
 
 echo "\n|start:install_env - - -"
-install_env
+#install_env
 
 echo "\n|start:ndk-build - - -"
 #export ANDROID_NDK_ROOT=/Users/chan/Documents/sdk/android-sdk/ndk/25.2.9519653
