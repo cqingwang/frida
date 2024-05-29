@@ -1,10 +1,11 @@
 #/bin/bash!
 
 install_env() {
-  sudo apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install build-essential tree ninja-build gcc-multilib g++-multilib lib32stdc++-9-dev flex bison xz-utils ruby ruby-dev python3-requests python3-setuptools python3-dev python3-pip libc6-dev libc6-dev-i386 -y
+  sudo apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install nodejs npm build-essential tree ninja-build gcc-multilib g++-multilib lib32stdc++-9-dev flex bison xz-utils ruby ruby-dev python3-requests python3-setuptools python3-dev python3-pip libc6-dev libc6-dev-i386 -y
   sudo gem install fpm -v 1.11.0 --no-document
   python3 -m pip install lief
   python3 -m pip install graphlib
+  python3 -m pip meson
 #  python3 -m pip colorama
 #  python3 -m pip prompt-toolkit
 #  python3 -m pip pygments
@@ -42,7 +43,7 @@ ndk-build --version
 
 #patch
 echo "\n|start:configure - - -"
-./configure --host=android-arm64 --enable-portal -- -Dfrida-gum:devkits=gum,gumjs -Dfrida-core:devkits=core
+./configure -- --enable-portal -- -Dfrida-gum:devkits=gum,gumjs -Dfrida-core:devkits=core
 
 echo "\n|start:make - - -"
 make
