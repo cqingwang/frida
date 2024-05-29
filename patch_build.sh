@@ -43,7 +43,7 @@ ndk-build --version
 
 #patch
 echo "\n|start:configure - - -"
-./configure -- --host=android-arm64 --enable-portal -- -Dfrida-gum:devkits=gum,gumjs -Dfrida-core:devkits=core
+./configure --host=android-arm64 --enable-portal -- -Dfrida-gum:devkits=gum,gumjs -Dfrida-core:devkits=core
 
 echo "\n|start:make - - -"
 make
