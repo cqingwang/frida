@@ -5,9 +5,9 @@ install_env() {
   sudo gem install fpm -v 1.11.0 --no-document
   python3 -m pip install lief
   python3 -m pip install graphlib
-  python3 -m pip colorama
-  python3 -m pip prompt-toolkit
-  python3 -m pip pygments
+#  python3 -m pip colorama
+#  python3 -m pip prompt-toolkit
+#  python3 -m pip pygments
 }
 
 patch() {
